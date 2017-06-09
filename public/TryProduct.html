@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Try Product</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <script src="mobileDeviceDetect.js" type="text/javascript"></script>
+    <link href="TryProductStyle.css" type="text/css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="client.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="hide_layer"></div>
+<div id="content">
+    <div id="head_wrapper">
+        <div id="logoContainer" align="center">
+            <img src="img/logo.png">
+        </div>
+    </div>
+    <div id="body_wrapper">
+        <div id="container">
+            <div id="navigation">
+                <ul>
+                    <li><a href="Recommendation.html">Recommendation</a> </li>
+                    <li>
+                        <a href="TryProduct.html">Try-Product</a>
+                        <div id="border1_bg"></div>
+                    </li>
+                    <li>Sponsored by <a href="https://www.giaran.com">Giaran.com</a></li>
+                </ul>
+            </div>
+            <div id="mainContent">
+                <div id="introduction_content">
+                    <div id="welcome">
+                        <p>Welcome to Giaran Beauty Lab:</p>
+                        <p>Try a Product</p>
+                    </div>
+                    <div id="infoContainer">
+                        <div id="info_bg">
+                            <div id="dialog_container">
+                                <img src="img/dialog.png">
+                            </div>
+                            <div id="info">
+                                <p>We analyzed your face data. Now you are choosing from our personalized makeover recommendations.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="settingButtons">
+                        <div id="btn_makeupContainer">
+                            <div class="btn_infoContainer"><p>Makeup Removal</p></div>
+                            <div class="btn_on" id = 'btn_makeUp_on' onclick="makeupRemove()"><img src="img/btnOff.png"></div>
+                        </div>
+                        <div id="btn_videoContainer">
+                            <div class="btn_infoContainer"><p>Live Video</p></div>
+                            <div class="btn_on" id = 'btn_video_on' onclick="LiveVideo()"><img src="img/btnOff.png"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="video_content">
+                    <div id="bookmark">
+                        <img src="img/Bookmark.png" onclick="tryProductBookmark()">
+                    </div>
+                    <div id="video_div">
+                        <video id="videoInsert"  ></video>
+                        <!--<script type="text/javascript" src="client.js"></script>-->
+                    </div>
+                    <script type="text/javascript">
+                        var useInNatural = function(){
+                            $('#productShown > p').html("product used in <b>natural</b> look");
+                        };
+                        var useInHeavy = function(){
+                            $('#productShown > p').html("product used in <b>heavy</b> look");
+                        };
+                        var useInFun = function(){
+                            $('#productShown > p').html("product used in <b>fun</b> look");
+                        };
+                    </script>
+                    <div id="btn_bar">
+                        <div id="btn_lipstick1" onclick="clickLipstick1()"><img src="img/btn_ls1.png">
+                            <div class="ls_border" id="ls1_border"></div>
+                        </div>
+                        <div id="btn_lipstick2" onclick="clickLipstick2()"><img src="img/btn_ls2.png">
+                            <div class="ls_border" id="ls2_border"></div>
+                        </div>
+                        <div id="btn_lipstick3" onclick="clickLipstick3()"><img src="img/btn_ls3.png">
+                            <div class="ls_border" id="ls3_border"></div>
+                        </div>
+                        <div id="btn_lipstick4" onclick="clickLipstick4()"><img src="img/btn_ls4.png">
+                            <div class="ls_border" id="ls4_border"></div>
+                        </div>
+                        <div id="btn_lipstick5" onclick="clickLipstick5()"><img src="img/btn_ls5.png">
+                            <div class="ls_border" id="ls5_border"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="productContainer">
+                    <p>You are Trying ...<p/>
+                    <div id="product">
+                        <div id="productShown">
+                            <div id="productInfo">
+
+                            </div>
+                            <div id="color_padding">
+                                <div id="colorsContainer">
+
+                                </div>
+                            </div>
+                            <div id="makePurchase">
+                                <a href="">Make Purchase</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="camera_popout_container">
+                    <div id="camera_popout_header">
+                        <div id="camera_popout_title">
+                            <p>Camera Detected!</p>
+                        </div>
+                        <div id="camera_popout_close">
+                            <img src="img/popout_btns/Close.png">
+                        </div>
+                    </div>
+                    <div id="camera_popout_content">
+                        <p>We are about to open your camera, click ‘Allow’on the next page to use the camera</p>
+                    </div>
+                    <div id="camera_popout_btns">
+                        <div id="btn_sure">
+                            <img src="img/popout_btns/btn_sure.png">
+                        </div>
+                        <div id="btn_template">
+                            <img src="img/popout_btns/btn_template.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="removal_popout_container">
+                    <div id="removal_popout_header">
+                        <div id="removal_popout_title">
+                            <p>Are You Wearing Makeup?</p>
+                        </div>
+                        <div id="removal_popout_close">
+                            <img src="img/popout_btns/Close.png">
+                        </div>
+                    </div>
+                    <div id="removal_popout_content">
+                        <p>Wearing makeup could effect our virtual
+                            result, but don’t worry, we can also virtually
+                            remove your makeup for you.
+                        </p>
+                    </div>
+                    <div id="removal_popout_btns">
+                        <div id="btn_remove">
+                            <img src="img/popout_btns/btn_remove.png">
+                        </div>
+                        <div id="btn_toGo">
+                            <img src="img/popout_btns/btn_toGo.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="foot_wrapper">
+        <div id="savedLookContainer">
+            <div id="savedLookTitle">
+                <p>Saved Looks</p>
+            </div>
+            <div id="savedProductMsg">
+                <hr>
+                <br>
+                <p>you haven't save any product</p>
+            </div>
+            <div id="savedLookProduct" style="display: none">
+                <script type="text/javascript">
+                    var showTopSix = function(){
+                        $('#savedContainerTop3').hide();
+                        $('#savedContainerTop6').show();
+                    };
+                    var showTopThree = function () {
+                        $('#savedContainerTop3').show();
+                        $('#savedContainerTop6').hide();
+                    };
+                </script>
+                <hr>
+                <div id="savedContainerTop3">
+                    <!--<div id="viewMore" onclick="showTopSix()">view more</div>-->
+                </div>
+                <div id="savedContainerTop6" style="display: none">
+                    <!--<div id="viewLess" onclick="showTopThree()">view less</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div id = "foot_wrapper">-->
+    <!--<div class="container"></div>-->
+    <!--</div>-->
+</div>
+
+</body>
+</html>

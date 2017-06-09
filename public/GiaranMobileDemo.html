@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giaran Mobile</title>
+    <link href="GiaranMobileDemo.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<script type="text/javascript">
+    <!--
+    //平台、设备和操作系统
+    var system = {
+        win: false,
+        mac: false,
+        xll: false,
+//        ipad:false
+    };
+    //检测平台
+    var p = navigator.platform;
+    system.win = p.indexOf("Win") == 0;
+    system.mac = p.indexOf("Mac") == 0;
+    system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+    console.log(system.win);
+    console.log(system.mac);
+    console.log(system.x11);
+//    system.ipad = (navigator.userAgent.match(/iPad/i) != null)?true:false;
+    //if visit this page by PC, relocation to Recommendation page.
+    if (system.win || system.mac || system.xll) {
+//        window.location = "http://localhost:3000/recommendation";
+        window.localtion = "http://54.144.38.211:8000/recommendation"
+    }else{
+
+    }
+    -->
+</script>
+    <div id="container">
+        <div id="head_wrapper">
+            <div id="logoContainer" align="center">
+                <img src="img/mobile/logo.png">
+            </div>
+        </div>
+        <div id="body_wrapper">
+            <div id="content">
+                <img src="img/mobile/body.png">
+            </div>
+        </div>
+        <div id="foot_wrapper">
+            <a href="http://www.giaran.com">Sponsored by http://giaran.com</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommendation</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <script src="mobileDeviceDetect.js" type="text/javascript"></script>
+    <link href="RecommendationHtmlStyle.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="client.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="hide_layer"></div>
+<div id="content">
+    <div id="head_wrapper">
+        <div id="logoContainer" align="center">
+            <img src="img/logo.png">
+        </div>
+    </div>
+    <div id="body_wrapper">
+        <div  id="container">
+            <div id="navigation">
+                <ul>
+                    <li><a href="Recommendation.html">Recommendation</a>
+                        <div id="border1_bg"></div>
+                    </li>
+
+                    <li><a href="TryProduct.html">Try-Product</a></li>
+                    <li>Sponsored by <a href="https://www.giaran.com">Giaran.com</a></li>
+                </ul>
+            </div>
+            <div id="mainContent">
+                <div id="introduction_content">
+                    <div id="welcome">
+                        <p>Welcome to Giaran Beauty Lab:</p>
+                        <p>Personalized <br>Recommendation!</p>
+                    </div>
+                    <div id="infoContainer">
+                        <div id="info_bg">
+                            <div id="dialog_container">
+                                <img src="img/dialog.png">
+                            </div>
+                            <div id="info">
+                                <!--<div class="triangle">-->
+                                <!--</div>-->
+                                <p>We analyzed your face data.
+                                    Now you are choosing from
+                                    our personalized makeover
+                                    recommendations.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="settingButtons">
+                        <div id="btn_makeupContainer">
+                            <div class="btn_infoContainer"><p>Makeup Removal</p></div>
+                            <div class="btn_on" id = 'btn_makeUp_on' onclick="makeupRemove()"><img src="img/btnOff.png"></div>
+                        </div>
+                        <div id="btn_videoContainer">
+                            <div class="btn_infoContainer"><p>Live Video</p></div>
+                            <div class="btn_on" id = 'btn_video_on' onclick="LiveVideo()"><img src="img/btnOff.png"></div>
+                        </div>
+                    </div>
+                    <!--<div id="techIntro">-->
+                        <!--<h2>&nbsp;Intro to the tech</h2>-->
+                    <!--</div>-->
+                </div>
+                <div id="video_content">
+                    <div id="bookmark">
+                       <img src="img/Bookmark.png" onclick="RecommendationBookmark()">
+                    </div>
+                    <div id="video_div">
+                        <video id="videoInsert"></video>
+                        <!--<script type="text/javascript" src="client.js"></script>-->
+                    </div>
+                    <script type="text/javascript">
+                        var naturalCount = 0;
+                        var heavyCount = 0;
+                        var funCount = 0;
+                        var useInNatural = function(){
+                            funCount++;
+                            $('#productShown > p').html("Product used in <b>natural</b> look");
+                            if (naturalCount  === 0){
+                                $('#try_heavy').show();
+                                naturalCount++;
+                            }
+                            $('#try_fun').hide();
+                            $('#try_natural').hide();
+
+                            $('#look_natural_border').show();
+                            $('#look_heavy_border').hide();
+                            $('#look_fun_border').hide();
+
+                        };
+                        var useInHeavy = function(){
+                            naturalCount++;
+                            $('#productShown > p').html("Product used in <b>heavy</b> look");
+                            if (heavyCount === 0){
+                                heavyCount++;
+                                $('#try_fun').show();
+                            }
+                            $('#try_natural').hide();
+                            $('#try_heavy').hide();
+
+                            $('#look_natural_border').hide();
+                            $('#look_heavy_border').show();
+                            $('#look_fun_border').hide();
+                        };
+                        var useInFun = function(){
+                            heavyCount++;
+                            $('#productShown > p').html("Product used in <b>fun</b> look");
+//                            if (funCount === 0){
+//                                $('#try_natural').show();
+//                                funCount++;
+//                            }
+                            $('#try_fun').hide();
+                            $('#try_heavy').hide();
+
+                            $('#look_natural_border').hide();
+                            $('#look_heavy_border').hide();
+                            $('#look_fun_border').show();
+                        };
+                    </script>
+                    <div id="btn_bar">
+                        <div id="btn_natural"><img src="img/btn_natural.png" onclick="useInNatural()">
+                            <div class="try_this_look" id="try_natural"></div>
+                            <div class="look_border" id="look_natural_border"></div>
+                        </div>
+                        <div id="btn_heavy"><img src="img/btn_heavy.png" onclick="useInHeavy()">
+                            <div class="try_this_look" id="try_heavy"></div>
+                            <div class="look_border" id="look_heavy_border"></div>
+                        </div>
+                        <div id="btn_fun"><img src="img/btn_fun.png" onclick="useInFun()">
+                            <div class="try_this_look" id="try_fun"></div>
+                            <div class="look_border" id="look_fun_border"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="productContainer">
+                    <p>Discover the look</p>
+                    <div id="product">
+                        <div id="productCheckBox">
+                            <div id="lipColor">
+                                <img src="img/lipcolor_unselected.png" onclick="LipCheck()">
+                            </div>
+                            <div id="eyeShadow" onclick="eyeShadowCheck()">
+                                <img src="img/eyeshadow_unselected.png">
+                            </div>
+                        </div>
+                        <!--<div id="productCheckBox">-->
+                            <!--<div id="lipColor">-->
+                                <!--<input id="check_lip" type="checkbox" onclick="LipCheck()">-->
+                                <!--<label for="check_lip">nLip Color</label>-->
+                            <!--</div>-->
+                            <!--<div id="eyeShadow">-->
+                                <!--<input id="check_Eye" type="checkbox" onclick="eyeShadowCheck()">-->
+                                <!--<label for="check_Eye">Eye Shadow</label>-->
+                            <!--</div>-->
+                            <!--<script type="text/javascript">-->
+                                <!--function LipCheck(){-->
+<!--//                                    $('#lipPro').toggle();-->
+                                    <!--if ($('#check_lip').is(":checked")){-->
+                                        <!--$('#lipPro').css('display','inline-block');-->
+                                    <!--}else{-->
+                                        <!--$('#lipPro').css('display','none');-->
+                                    <!--}-->
+                                <!--}-->
+                                <!--function eyeShadowCheck() {-->
+<!--//                                    $('#eyeShadowPro').toggle();-->
+                                    <!--if ($('#check_Eye').is(":checked")){-->
+                                        <!--$('#eyeShadowPro').css('display','inline-block');-->
+                                    <!--}else{-->
+                                        <!--$('#eyeShadowPro').css('display','none');-->
+                                    <!--}-->
+                                <!--}-->
+                            <!--</script>-->
+                        <!--</div>-->
+                        <div id="productShown">
+                            <p>Product used in <b>natural</b> look</p>
+                            <div id="lipPro">
+                                <div id="lipProIcon">
+                                    <img src="img/lipstick1.png">
+                                </div>
+                                <div id="lipProInfoContainer">
+                                    <!--<div></div>-->
+                                    <div id="lipProInfo">
+                                        <p>ROUGH COCO SHINE</p>
+                                        <p>Hydrating Sheer Lipshine</p>
+                                    </div>
+                                    <div id="lipProViewMore"></div>
+                                </div>
+                            </div>
+                            <div id="eyeShadowPro">
+                                <div id="eyeProIcon">
+                                    <img src="img/les4.png">
+                                </div>
+                                <div id="eyeProInfoContainer">
+                                    <div id="eyeProInfo">
+                                        <p>LES 4 OMBRES</p>
+                                        <p>Multi Effect Quadra Eyeshadow</p>
+                                    </div>
+                                    <div id="eyeProViewMore"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tutorialContainer">
+                        <p>Virtual Tutorials</p>
+                        <div id="tutorial">
+                            <p>Learn to apply the
+                                look layer by layer
+                            </p>
+                            <div id="btn_tutorial"><img src="img/play.png" onclick="tutorial_show()"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tutorial_bg">
+                    <div id="tutorialContent">
+                        <!--<div class="triangle" id="tutorial_triangle"></div>-->
+                        <div id="tutorial_header">
+                            <div id="tutorial_title">
+                                <p>Learn this Makeover Step by Step:</p>
+                            </div>
+                            <div id="tutorial_close">
+                                <img src="img/tutorial_btns/Close.png" onclick="tutorial_close()">
+                            </div>
+                        </div>
+                        <div id="tutorial_mainContent">
+                            <div id="tutorial_left">
+                                <div id="tutorial_btns">
+                                    <table cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td id="step_1">
+                                                <div class="step_img_container" id="step1_container">
+                                                    <div id="step1"><img src="img/tutorial_btns/1-1.png" onclick="step_1()"></div>
+                                                    <div class="step_bg" id="step1_bg">
+                                                        <img src="img/step_bg.png">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td id="step_2">
+                                                <div class="step_img_container" id="step2_container">
+                                                    <div id="step2"><img src="img/tutorial_btns/2-2.png" onclick="step_2()"></div>
+                                                    <div class="step_bg" id="step2_bg">
+                                                        <img src="img/step_bg.png">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td id="step_3">
+                                                <div class="step_img_container" id="step3_container">
+                                                    <div id="step3"><img src="img/tutorial_btns/3-3.png" onclick="step_3()"></div>
+                                                    <div class="step_bg" id="step3_bg">
+                                                        <img src="img/step_bg.png">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td id="step_4">
+                                                <div class="step_img_container" id="step4_container">
+                                                    <div id="step4"><img src="img/tutorial_btns/4-4.png" onclick="step_4()"></div>
+                                                    <div class="step_bg" id="step4_bg">
+                                                        <img src="img/step_bg.png">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td id="step_5">
+                                                <div class="step_img_container" id="step5_container">
+                                                    <div id="step5"><img src="img/tutorial_btns/5-5.png" onclick="step_5()"></div>
+                                                    <div class="step_bg" id="step5_bg">
+                                                        <img src="img/step_bg.png">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td id="step_6">
+                                                <div class="step_img_container" id="step6_container">
+                                                    <div id="step6"><img src="img/tutorial_btns/6-6.png" onclick="step_6()"></div>
+                                                    <div class="step_bg" id="step6_bg">
+                                                        <img src="img/step_bg.png">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td id="step_7">
+                                                <div class="step_img_container" id="step7_container">
+                                                    <div id="step7"><img src="img/tutorial_btns/7-7.png" onclick="step_7()"></div>
+                                                    <div class="step_bg" id="step7_bg">
+                                                        <img src="img/step_bg.png">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td id="step_8">
+                                                <div class="step_img_container" id="step8_container">
+                                                    <div id="step8"><img src="img/tutorial_btns/8-8.png" onclick="step_8()"></div>
+                                                    <div class="step_bg" id="step8_bg">
+                                                        <img src="img/step_bg.png">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div id="tutorial_Info">
+                                    <div id="tutorial_log">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tutorial_right">
+                                <div id="modelContent">
+                                    <img src="img/model.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="camera_popout_container">
+                    <div id="camera_popout_header">
+                        <div id="camera_popout_title">
+                            <p>Camera Detected!</p>
+                        </div>
+                        <div id="camera_popout_close">
+                            <img src="img/popout_btns/Close.png">
+                        </div>
+                    </div>
+                    <div id="camera_popout_content">
+                        <p>We are about to open your camera, click
+                            ‘Allow’on the next page to use the camera</p>
+                    </div>
+                    <div id="camera_popout_btns">
+                        <div id="btn_sure">
+                            <img src="img/popout_btns/btn_sure.png">
+                        </div>
+                        <div id="btn_template">
+                            <img src="img/popout_btns/btn_template.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="removal_popout_container">
+                    <div id="removal_popout_header">
+                        <div id="removal_popout_title">
+                            <p>Are You Wearing Makeup?</p>
+                        </div>
+                        <div id="removal_popout_close">
+                            <img src="img/popout_btns/Close.png">
+                        </div>
+                    </div>
+                    <div id="removal_popout_content">
+                        <p>Wearing makeup could effect our virtual
+                            result, but don’t worry, we can also virtually
+                            remove your makeup for you.
+                        </p>
+                    </div>
+                    <div id="removal_popout_btns">
+                        <div id="btn_remove">
+                            <img src="img/popout_btns/btn_remove.png">
+                        </div>
+                        <div id="btn_toGo">
+                            <img src="img/popout_btns/btn_toGo.png">
+                        </div>
+                    </div>
+                </div>
+                <!--<div id="savedLook">-->
+
+                <!--</div>-->
+            </div>
+
+        </div>
+    </div>
+    <div id="foot_wrapper">
+        <div id="savedLookContainer">
+            <div id="savedLookTitle">
+                <p>Saved Looks</p>
+            </div>
+            <div id="savedProductMsg">
+                <hr>
+                <br>
+                <p>you haven't save any product</p>
+            </div>
+            <div id="savedLookProduct" style="display: none">
+                <script type="text/javascript">
+                    var showTopSix = function(){
+                        $('#savedContainerTop3').hide();
+                        $('#savedContainerTop6').show();
+                    };
+                    var showTopThree = function () {
+                        $('#savedContainerTop3').show();
+                        $('#savedContainerTop6').hide();
+                    };
+                </script>
+                <hr>
+                <div id="savedContainerTop3">
+                    <div id="viewMore" onclick="showTopSix()">view more</div>
+                </div>
+                <div id="savedContainerTop6" style="display: none">
+                    <div id="viewLess" onclick="showTopThree()">view less</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div id = "foot_wrapper">-->
+        <!--<div class="container"></div>-->
+    <!--</div>-->
+</div>
+</body>
+</html>

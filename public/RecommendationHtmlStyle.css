@@ -1,0 +1,1106 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    /*font-family: "Helvetica Neue";*/
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    /*min-width:1060px;*/
+    /*min-height:960px;*/
+    width: 57%;
+    height: 100%;
+    margin:0 auto;
+    background-color:  #fff;
+
+}
+#content{
+    height: 100%;
+}
+#logoContainer{
+    margin:3.5em auto 0 auto;
+    width:6.5em;
+    height: auto;
+}
+#logoContainer img{
+    width:100%;
+    max-width: 100%;
+}
+/**************** head wrapper ***************/
+div#head_wrapper{
+    box-sizing: border-box;
+    /*min-width: 1060px;*/
+    position: fixed;
+    right:0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    margin-bottom: 1em;
+    height: 6.5em;
+    background-color: #fff;
+    box-shadow: 0 1px 5px #4C4C4C ;
+}
+/********************************************/
+
+
+/**************** body wrapper ***************/
+div#body_wrapper{
+    letter-spacing: 0.15rem;
+    box-sizing: border-box;
+    height: 80%;
+    width:100%;
+    margin:5.5em auto 0 auto;
+    /*margin-top: 1.5em;*/
+    padding: 2em 3em 0 3em;
+}
+
+div#container{
+    width: 100%;
+}
+/**************** navigation ***************/
+div#navigation{
+    /*box-sizing: border-box;*/
+    letter-spacing: 0;
+    width:100%;
+    height: 3.75em;
+    background-color: #fff;
+    margin:1em auto 0 auto;
+    display: inline-block;
+}
+div#navigation ul{
+    height:3.75em;
+}
+div#navigation ul li{
+    position: relative;
+    display: inline-block;
+    height: 3.75em;
+    line-height: 3.75em;
+    font-weight: bolder;
+    /*padding-left: 1em;*/
+}
+div#navigation ul a{
+    text-decoration: none;
+    color:black;
+    line-height: 3.75em;
+}
+div#navigation li:first-child a{
+    /*border-bottom: 2px black solid;*/
+    margin-right: 2em;
+    /*font-size:calc(12px + 0.4vw);*/
+    font-size: 1.8rem;
+    font-stretch: condensed;
+}
+div#border1_bg{
+    z-index: 10;
+    display: inline-block;
+    position: absolute;
+    bottom: -1.8em;
+    left: -9%;
+    width: 100%;
+    height: 35%;
+    background-image: url("img/Title_Selection.png");
+    /*background-image: url(img/border.png);*/
+    background-size: 100% 100%;
+    opacity: 1;
+}
+div#navigation li:nth-child(2) a{
+    /*font-size:calc(12px + 0.4vw);*/
+    font-size:1.8rem;
+    font-stretch: condensed;
+
+}
+div#navigation li:last-child{
+    font-weight: normal;
+    color: gray;
+    float: right;
+    font-size:1.8rem;
+    /*font-size:calc(10px + 0.4vw);*/
+}
+div#navigation li:last-child a{
+    color: #8ea0fd;
+    font-weight:normal;
+    font-size:1.8rem;
+}
+/*****************************************/
+
+/*************** main content ***********/
+
+div#mainContent{
+    box-sizing: border-box;
+    height: 90%;
+    width:100%;
+    position: relative;
+    margin-top:3%;
+    /*min-height: 640px;*/
+    /*height: 40em;*/
+}
+
+/************* Introduction **********/
+div #introduction_content{
+    /*border: solid 2px black;*/
+    width: 28%;
+    height: 100%;
+    display: inline-block;
+}
+div#welcome{
+    box-sizing: border-box;
+    padding-top:15%;
+    display:inline-block;
+    float:left;
+    clear:both;
+    height:25%;
+    width: 100%;
+    background-color: #fff;
+}
+div#welcome p:first-child{
+    /*font-size:calc(12px + 0.4vw);*/
+    font-size:1.8rem;
+    color: black;
+    font-weight: 300;
+    height:20%;
+}
+div#welcome p:nth-child(2){
+    margin-top:4%;
+    /*font-size:calc(20px + 1vw);*/
+    font-size:3.2rem;
+
+    font-weight: bold;
+}
+
+div#infoContainer{
+    margin-top: 23%;
+    display: inline-block;
+    float: left;
+    clear: both;
+    width: 100%;
+    height: 27%;
+}
+
+div#info p{
+    height:100%;
+    font-size: 1.7rem;
+    /*font-size:calc(12px + 0.4vw);*/
+    color: black;
+    font-weight: 300;
+}
+div#info_bg{
+    position: relative;
+    width: 100%;
+    height:100%;
+}
+div#dialog_container{
+    position: absolute;
+    top: 0;
+    left: -2%;
+    width: 100%;
+    height: 100%;
+}
+div#dialog_container img{
+    width: 104%;
+    height: 100%;
+}
+
+div#info{
+    position: relative;
+    line-height: 1.4;
+    box-sizing: border-box;
+    padding: 13% 2% 0% 8%;
+    width: 86%;
+    height: 100%;
+    /*box-shadow: 1px 1px 5px grey;*/
+}
+
+div#settingButtons{
+    margin-top: 25%;
+    display: inline-block;
+    float: left;
+    clear: both;
+    height: 24%;
+    width: 94%;
+}
+div#btn_makeUp_on{
+     position: absolute;
+     height: 50%;
+     /*top:-10%;*/
+}
+div#btn_video_on{
+    position: absolute;
+    height:50%;
+    /*top:-10%;*/
+}
+div#btn_makeupContainer{
+    position: relative;
+    height:45%;
+    width:100%;
+    margin-bottom: 7%;
+/*border: 1px solid black;*/
+}
+div#btn_videoContainer{
+    position: relative;
+    height:45%;
+    width:100%;
+    /*border: 1px solid black;*/
+}
+.btn_on{
+    display: inline-block;
+    float:right;
+    width:30%;
+    height:70%;
+    /*padding-top:2%;*/
+}
+.btn_off{
+    float:left;
+    width:30%;
+    height:70%;
+    /*padding-top:2%;*/
+}
+.btn_on img{
+    /*width: 100%;*/
+    /*max-width: 100%;*/
+    float:right;
+    height:100%;
+    max-height: 100%;
+}
+.btn_off img{
+    /*width: 100%;*/
+    /*max-width: 100%;*/
+    float:right;
+    height:100%;
+    max-height: 100%;
+}
+.btn_on:hover{
+    cursor: pointer;
+}
+.btn_off:hover{
+    cursor:pointer;
+}
+.btn_infoContainer{
+    display: inline-block;
+    float:left;
+    clear:both;
+    width:70%;
+    height:50%;
+    /*height:100%;*/
+}
+.btn_infoContainer p{
+    padding-top: 5%;
+    font-weight: bold;
+    /* font-size: calc(15px + 0.4vw); */
+    font-size: 2rem;
+    height: 100%;
+    line-height: 2rem;
+}
+
+
+/************* video content **************/
+div#video_content{
+    box-sizing: border-box;
+    left: 29.5%;
+    position: absolute;
+    width: 45%;
+    height: 100%;
+    display: inline-block;
+    background-image: url(img/model.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#bookmark{
+    position: absolute;
+    left: 4%;
+    top: 4%;
+    width: 8%;
+    height: 9%;
+    z-index: 90;
+}
+#bookmark img{
+    width: 100%;
+    max-width: 100%;
+}
+#bookmark:hover{
+    cursor:pointer;
+}
+
+#video_div{
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+}
+div#btn_bar{
+    width:100%;
+    box-sizing: border-box;
+    /*padding: 0 1.5em 1em 1.5em;*/
+    height:16%;
+    /*border:1px solid black;*/
+    bottom: 0;
+    position:absolute;
+}
+div#btn_bar img{
+    max-width: 100%;
+    width:100%;
+    height: auto;
+}
+div#btn_natural, #btn_heavy, #btn_fun{
+    position: relative;
+    display: inline-block;
+    width:15%;
+    height:70%;
+    padding: 0 6% 0em 11%;
+    /*border: 1px solid red;*/
+}
+div#btn_heavy{
+    /*margin-left:6em;*/
+}
+div#btn_fun{
+    /*float: right;*/
+}
+
+div.try_this_look{
+    /*border: 1px black solid;*/
+    box-sizing: border-box;
+    position: absolute;
+    width: 80%;
+    height: 86%;
+    top: -70%;
+    left: 22%;
+    background-image: url("img/try this look.png");
+    background-size: 100% 100%;
+    display: none;
+    z-index:50;
+}
+div#try_natural{
+    display: inline-block;
+}
+div.look_border{
+    display: none;
+    z-index: 10;
+    position: absolute;
+    bottom: -14%;
+    left: 27%;
+    width: 60%;
+    height: 30%;
+    background-image: url(img/border/look_border.png);
+    background-size: 100% 100%;
+    opacity: 1;
+}
+div#btn_natural img:hover, #btn_heavy img:hover, #btn_fun img:hover{
+    cursor: pointer;
+}
+
+/*div#btn_natural img{*/
+    /*box-sizing: border-box;*/
+    /*border-bottom: 2px solid black;*/
+    /*border-image: url(img/border.png) 0 0 30 0 stretch;*/
+/*}*/
+#videoInsert{
+    height: 100%;
+    display:block;
+    margin-left: -36%;
+}
+/****************** product container *****************/
+div #productContainer{
+    letter-spacing: 0;
+    box-shadow: 3px 1px 5px -1px grey;
+    width: 26%;
+    padding: 1% 3% 1% 3%;
+    box-sizing: border-box;
+    /* border: solid 0.1875em black; */
+    height: 98.8%;
+    float: right;
+    display: inline-block;
+    margin-top: 0.13%;
+}
+div#productContainer p{
+    font-stretch: condensed;
+    font-weight: bold;
+    /*font-size: calc( 17px + 0.5vw);*/
+    font-size:2.4rem;
+    height: 5%;
+}
+div#product{
+    float:right;
+    clear:both;
+    height:50%;
+    width:100%;
+}
+/***************** check box ****************/
+div#productCheckBox{
+    /*padding:2em 1em 1em 0;*/
+    padding-top: 8%;
+    width: 100%;
+    float:right;
+    clear:both;
+    /*height: auto;*/
+    display: inline-block;
+    font-weight: bold;
+}
+
+div#eyeShadow{
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    float: right;
+    clear: both;
+}
+div#lipColor{
+    width: 40%;
+    height: 50%;
+    display: inline-block;
+}
+div#eyeShadow img, #lipColor img{
+    width:100%;
+    max-width: 100%;
+}
+div#eyeShadow img:hover, #lipColor:hover{
+    cursor: pointer;
+}
+div#productShown{
+    margin-top: 1em;
+    padding:1em 1em;
+    box-sizing: border-box;
+    float:right;
+    clear:both;
+    width: 100%;
+    height:90%;
+    box-shadow: 1px 1px 5px gray;
+}
+div#productShown p{
+    letter-spacing: 0.05rem;
+    height: 8%;
+    font-weight: normal;
+    font-size: 1.5rem;
+    /*font-size:calc(10px + 0.4vw);*/
+}
+div#productShown p b{
+    font-size: 1.5rem;
+}
+/***********Example Product Lipstick ************/
+div#lipPro{
+    display: none;
+    margin-top:10%;
+    width:100%;
+    height: 35%;
+    float:left;
+    clear:both;
+    /*box-shadow: 1px 1px 5px gray;*/
+}
+div#lipProIcon{
+    width: 35%;
+    height: 80%;
+    display:inline-block;
+    /*background-image: url("img/lipstick1.png");*/
+    /*background-size: 100% 100%;*/
+}
+div#lipProIcon img{
+    /*max-width: 100%;*/
+    max-height: 100%
+}
+div#lipProInfoContainer{
+    display: inline-block;
+    float: right;
+    clear: both;
+    line-height: 100%;
+    width: 60%;
+    height: 100%;
+}
+div#lipProInfo{
+    display: inline-block;
+    float: right;
+    clear: both;
+    height : 60%;
+    width: 100%;
+}
+div#lipProInfo p:first-child{
+    height: 71%;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    font-weight: bold;
+    /*font-size:calc(9px + 0.4vw);*/
+
+    font-weight: bold;
+    /*overflow: hidden;*/
+}
+div#lipProInfo p:nth-child(2){
+    height:30%;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    /*font-size:calc(8px + 0.4vw);*/
+
+    font-weight: normal;
+}
+
+/************* Example Eyeshadow Product ************/
+div#eyeShadowPro{
+    margin-top: 10%;
+    display: none;
+    width:100%;
+    height:35%;
+    /*box-shadow: 1px 1px 5px gray;*/
+}
+div#eyeProIcon{
+    width: 35%;
+    height: 80%;
+    display:inline-block;
+    /*background-image: url("img/les4.png");*/
+    /*background-size: 100% 100%;*/
+}
+div#eyeProIcon img{
+    /*max-width: 100%;*/
+    max-height: 100%
+}
+div#eyeProInfoContainer{
+    display: inline-block;
+    float: right;
+    clear: both;
+    line-height: 100%;
+    width: 60%;
+    height: 100%;
+}
+div#eyeProInfo{
+    display: inline-block;
+    float: right;
+    clear: both;
+    height : 60%;
+    width: 100%;
+}
+div#eyeProInfo p:first-child{
+    height: 71%;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    font-weight: bold;
+}
+div#eyeProInfo p:nth-child(2){
+    height: 30%;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    /*font-size:calc(8px + 0.4vw);*/
+    font-weight: normal;
+    /*overflow: hidden;*/
+}
+
+/*************** tutorial **************/
+div#tutorialContainer{
+    float:right;
+    clear:both;
+    width: 100%;
+    margin-top: 38%;
+    height: 18%;
+}
+div#tutorialContainer p{
+    height:30%;
+    font-stretch: condensed;
+    font-weight: bold;
+    font-size: 2.4rem;
+    /*font-size: calc( 17px + 0.5vw);*/
+
+}
+div#tutorial{
+    position: relative;
+    height: 54%;
+    margin-top: 10%;
+    padding: 1em 1em 0.5em 1em;
+    box-shadow: 1px 1px 5px grey;
+    box-sizing: border-box
+}
+div#tutorial p{
+    position: absolute;
+    top: 19%;
+    left: 10%;
+    width: 64%;
+    display: inline-block;
+    font-weight: normal;
+    font-size: 1.5rem;
+    /* font-size: calc(11px + 0.3vw); */
+    height: 100%;
+    line-height: 150%;
+}
+div#btn_tutorial{
+    position: absolute;
+    top: 23%;
+    right: 0;
+    margin: 0 7% 0 0;
+    display: inline-block;
+    width: 15%;
+    height: 92%;
+    /* border: 1px solid black; */
+    float: right;
+}
+div#btn_tutorial img{
+    width: 100%;
+    max-width: 100%;
+}
+div#btn_tutorial:hover{
+    cursor:pointer;
+}
+/******************** foot wrapper *****************/
+div#foot_wrapper{
+    box-sizing: border-box;
+    height: 10%;
+    width: 100%;
+    padding: 2em 3em 0 3em;
+    /*margin: 0 auto 0 auto;*/
+}
+
+/****** saved look ********/
+
+div#savedLookContainer{
+    margin: 3rem 0 0 0;
+    /*height: 22em;*/
+    height: auto;
+    /*box-shadow: 1px 1px 5px gray;*/
+    /*padding-bottom: 3rem;*/
+}
+div#savedLookTitle{
+    display: inline-block;
+    float:left;
+    clear:both;
+    width: 100%;
+    height: auto;
+    margin:3% 0 0 0;
+}
+div#savedLookTitle p{
+    font-weight: bold;
+    font-stretch: condensed;
+    font-size: 2.4rem;
+    /*font-size: calc( 17px + 0.5vw);*/
+}
+div#savedLookProduct{
+    display: inline-block;
+    /*box-shadow: 1px 1px 5px gray;*/
+    width: 100%;
+    height: 64%;
+    height: auto;
+    margin: 3rem 0 0 0;
+    padding-bottom: 3rem;
+}
+div#savedProductMsg{
+    display: inline-block;
+    width:100%;
+    margin:3% 0 0 0;
+}
+div#savedProductMsg p{
+    font-weight: bold;
+    /*font-size: calc( 10px + 0.4vw);*/
+    font-size:1.6rem;
+
+}
+div#savedContainerTop3{
+    position: relative;
+    margin: 15px auto;
+    width: 100%;
+    height: 100%;
+    padding-left: 0;
+}
+div#viewMore{
+    width:10%;
+    height:15%;
+    /*font-size: calc(10px + 0.4vw);*/
+    font-size:1.5rem;
+    text-decoration: underline;
+    position: absolute;
+    bottom: -5rem;
+    right: 0;
+}
+div#savedContainerTop6{
+    position: relative;
+    margin: 15px auto;
+    width: 100%;
+    height: 100%;
+    padding-left: 1%;
+}
+div#viewLess{
+    width:10%;
+    height:15%;
+    /*font-size: calc(10px + 0.4vw);*/
+    font-size:1.5rem;
+    text-decoration: underline;
+    position: absolute;
+    bottom: -5rem;
+    right: 0;
+}
+div#viewMore:hover,div#viewLess:hover{
+    cursor: pointer;
+}
+/************ tutorial content ************/
+div#tutorial_bg{
+    letter-spacing:0;
+    display: none;
+    box-sizing: border-box;
+    z-index: 95;
+    width: 78.5%;
+    height: 97%;
+    position: absolute;
+    left: -1.1%;
+    top: 0px;
+    background-image: url(img/tutorial_box.png);
+    background-size: 100% 100%;
+}
+div#tutorialContent{
+    /*display: none;*/
+    /*box-shadow: 1px 1px 5px gray;*/
+    box-sizing: border-box;
+    /*z-index: 95;*/
+    width:100%;
+    height: 100%;
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 0;*/
+    /*background-color: #f4f4f4;*/
+}
+div#tutorial_header{
+    position: relative;
+    box-sizing:border-box;
+    /*border: 1px solid black;*/
+    height: 17%;
+    width: 100%;
+}
+div#tutorial_title{
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+    width: 80%;
+    height: 100%;
+    padding: 3% 0 0 5%;
+
+}
+div#tutorial_title p{
+    font-weight: bold;
+    /*font-size: 20pt;*/
+    /*font-size:160%;*/
+    font-size:2.4rem;
+
+}
+div#tutorial_close{
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+    position: absolute;
+    right: 6%;
+    top: 17%;
+    width: 3%;
+    height: 20%;
+}
+div#tutorial_close img{
+    max-width:100%;
+    width: 100%;
+}
+div#tutorial_close img:hover{
+    cursor: pointer;
+}
+
+div#tutorial_mainContent{
+    box-sizing: border-box;
+    /*border: 1px solid black;*/
+    height: 83%;
+    width: 100%;
+}
+
+div#tutorial_left{
+    box-sizing: border-box;
+    /*border: 1px solid blue;*/
+    width: 45%;
+    height: 90%;
+    display: inline-block;
+}
+div#tutorial_btns{
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+    width: 119%;
+    height: 55%;
+}
+
+div#tutorial_btns table{
+    margin: 0 14%;
+    width: 70%;
+    height: 92%;
+}
+div#tutorial_btns table tr{
+    width: 30%;
+    height: 30%;
+}
+div#tutorial_btns td{
+    width: 30%;
+    height: 30%;
+
+    text-align: center;
+}
+
+div.step_img_container{
+    position:relative;
+    width:50%;
+    height: 50%;
+    /*background-color: black;*/
+    background-image: url("img/step_bg.png");
+    background-size: cover;
+    background-position: center;
+}
+div.step_img_container:hover{
+    cursor: pointer;
+}
+div.step_img_container img{
+    width:100%;
+    /*height: 100%;*/
+    max-height:100%;
+}
+div.step_bg{
+    display: none;
+    position: absolute;
+    width: 170%;
+    height: 170%;
+    top: -35%;
+    left: -35%;
+    z-index: -1
+}
+
+/*div#step1 img, #step2 img,#step3 img,#step4 img,#step5 img,#step6 img,#step7 img,#step8 img{*/
+    /*max-width: 100%;*/
+    /*max-height: 50%;*/
+/*}*/
+/*div#step1*/
+/*div.step_bg img{*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+/*}*/
+/*div#tutorial_btns td img:hover{*/
+    /*cursor: pointer;*/
+/*}*/
+
+
+div#tutorial_btns table,tr,td{
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+}
+
+div#tutorial_Info{
+    box-sizing: border-box;
+    /*border: 1px solid black;*/
+    height: 45%;
+    width: 100%;
+}
+div#tutorial_log{
+    margin: -1.3% 10% 0 18%;
+    box-shadow: 1px 1px 5px gray;
+    height:100%;
+    width: 67%;
+    background-color: white;
+}
+
+div#tutorial_right{
+    box-sizing: border-box;
+    /*border: 1px solid purple;*/
+    width: 55%;
+    height: 90%;
+    float:right;
+    clear: both;
+    display: inline-block;
+}
+div#modelContent{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 18% 0 0;
+}
+div#modelContent img{
+    /*max-width: 100%;*/
+    height:100%;
+    max-height: 100%;
+}
+/************* popout windows ***********/
+div#camera_popout_container{
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px grey;
+    z-index: 105;
+    position: fixed;
+    left: 34%;
+    top: 30%;
+    width: 60rem;
+    background-color: white;
+    display: none;
+}
+
+div#camera_popout_header{
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 28%;
+    /*padding: 3% 0 0 5%;*/
+}
+div#camera_popout_title{
+    box-sizing: border-box;
+    padding: 5% 0 0 8%;
+}
+div#camera_popout_title p{
+    font-weight: bold;
+    font-size: 2.6rem;
+    /*font-size:calc(17px + 1vw);*/
+
+}
+div#camera_popout_close{
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+    position: absolute;
+    right: 5%;
+    top: 18%;
+    width: 3%;
+    height: 19%;
+}
+div#camera_popout_close img{
+    width: 100%;
+    height: 100%;
+}
+div#camera_popout_content{
+    /*border: 1px solid red;*/
+    box-sizing: border-box;
+    width: 100%;
+    height: 30%;
+}
+
+div#camera_popout_content p{
+    font-family: Avenir;
+    padding: 0 8% 0 8%;
+    font-size:2.3rem;
+    /*font-size: calc( 16px + 0.3vw);*/
+    /*text-align: center;*/
+}
+div#camera_popout_btns{
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-top: 0%;
+    height: 30%;
+    width: 44%;
+}
+div#btn_sure{
+    /*box-sizing: border-box;*/
+    padding-bottom: 5%;
+    width: 100%;
+    height: 45%;
+}
+div#btn_sure img{
+    max-width: 100%;
+    max-height: 100%;
+}
+div#btn_template{
+    /*padding-top: 5%;*/
+    /*box-sizing: border-box;*/
+    width: 100%;
+    height: 45%;
+}
+div#btn_template img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+div#btn_template img:hover, #btn_sure img:hover, #camera_popout_close img:hover{
+    cursor: pointer;
+}
+/*******************/
+div#removal_popout_container{
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px grey;
+    z-index: 105;
+    position: fixed;
+    left: 34%;
+    top: 30%;
+    width: 60rem;
+    background-color: white;
+    display: none;
+}
+
+div#removal_popout_header{
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 27%;
+    /*padding: 3% 0 0 5%;*/
+}
+div#removal_popout_title{
+    padding: 5% 0 0 5%;
+}
+div#removal_popout_title p{
+    font-weight: bold;
+    font-size: 2.6rem;
+    /*font-size:calc(17px + 1vw);*/
+
+}
+div#removal_popout_close{
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+    position: absolute;
+    right: 5%;
+    top: 18%;
+    width: 3%;
+    height: 19%;
+}
+div#removal_popout_close img{
+    width: 100%;
+    height: 100%;
+}
+div#removal_popout_content{
+    /*border: 1px solid red;*/
+    box-sizing: border-box;
+    width: 91%;
+    height: 34%;
+    margin: 0 auto;
+}
+
+div#removal_popout_content p{
+    font-family: Avenir;
+    font-size:2.4rem;
+    /*font-size:150%;*/
+    /*font-size: calc( 17px + 0.5vw);*/
+
+    /*text-align: center;*/
+}
+div#removal_popout_btns{
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-top: 0%;
+    height: 34%;
+    width: 44%;
+}
+div#btn_remove{
+    box-sizing: border-box;
+    padding-bottom: 5%;
+    width: 100%;
+    height: 50%;
+}
+div#btn_remove img{
+    max-width: 100%;
+    max-height: 100%;
+}
+div#btn_toGo{
+    padding-top: 5%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50%;
+}
+div#btn_toGo img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+div#btn_toGo img:hover, #btn_remove img:hover, #removal_popout_close img:hover{
+    cursor: pointer;
+}
+
+/********* hide layer**********/
+div#hide_layer{
+    width:100vw;
+    height:100vh;
+    /*min-width: 1060px;*/
+    /*min-height: 868px;*/
+    /*height: calc(10em + 100%);*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color:#000;
+    filter:alpha(opacity=60);
+    opacity:0.6;
+    display:none;
+    z-Index:101;
+}
